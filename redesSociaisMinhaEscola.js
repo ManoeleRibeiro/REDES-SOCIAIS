@@ -6,7 +6,7 @@ async function redesSociaisFavoritasMinhaEscola() {
         const dadosLocais = JSON.parse(dadosLocaisString)
         processarDados(dadosLocais)
     } else {
-        const url = 'https://script.googleusercontent.com/macros/echo?user_content_key=rSe23zaQC7gOvWgFJbdtPaqh7ewsO5hQmusYOeqdorTRN8C25vVV3BicsPoS6HS3jnJY9NHhy_pNZj6prQdxDH3305Mro8vNm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnPvESZ9fvnAeFWqfIvIacdoRZcVMZ-nDSydw9_0gseo2TN3y60rOTtwDBCYnKQf6yIqgf8yOzNfccjP633C9VnHmUmPZvRBJY9z9Jw9Md8uu&lib=MCARBaBtNBMHKiEwMeRap3j6V_G7SlGWF'
+        const url = 'https://script.googleusercontent.com/a/macros/escola.pr.gov.br/echo?user_content_key=dc08tF-niHso-BYnZcovcrUTg1Imh2ufU9G2bJsRptD3oIQHDCzu03tusJjQ7txNdlw6sKo6OB93MykIUe8kK0ja-0wDhqabOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMi80zadyHLKBGCNaBo701naU8cM07sy4y4YFj_89rZFWs_9FzuMa_ctRLLSkTLlG7siCVXe8iT66gNj9W8BwtCxNJWkD4sw2_S8oMa1fV8SwSUtIUnGALUpid1X6QIdRpCVMY41jYEdcYZpTak_o22Q&lib=M5wr9lQB66GnDRgxs0KZxH-hZW63ph_q6'
         const res = await fetch(url)
         const dados = await res.json()
         localStorage.setItem('respostaRedesSociais', JSON.stringify(dados))
