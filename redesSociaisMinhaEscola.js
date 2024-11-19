@@ -1,6 +1,6 @@
 import { criarGrafico, getCSS, incluirTexto } from "./common.js"
 
-async function redesSociaisFavoritasMinhaEscola() {
+async function redesSociaisMinhaEscola() {
     const dadosLocaisString = localStorage.getItem('respostaRedesSociais')
     if (dadosLocaisString) {
         const dadosLocais = JSON.parse(dadosLocaisString)
@@ -37,7 +37,7 @@ function processarDados(dados) {
         paper_bgcolor: getCSS('--bg-color'),
         height: 700,
         title: {
-            text: 'Redes sociais que as pessoas da minha escola mais gostam',
+            text: 'Redes sociais que os alunos do BFA mais gostam (galera do 3°C):',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
@@ -54,7 +54,8 @@ function processarDados(dados) {
     }
 
     criarGrafico(data, layout)
-    incluirTexto(`Como no mundo, a amostra de pessoas entrevistadas por mim, demonstra um apreço pelo <span>Instagram</span> em relação a outras redes.`)
+    incluirTexto(`Como no mundo, a amostra de pessoas entrevistadas por mim, demonstra um apreço pelo <span>Whatsapp</span> em relação a outras redes.
+        Pelo visto a galera curte mais as mensagens, viva a comunicação!`)
 }
 
-redesSociaisFavoritasMinhaEscola()
+redesSociaisMinhaEscola()
